@@ -37,6 +37,8 @@ continue_btn = browser.find_element('name', 'j_id_jsp_933481798_1:j_id_jsp_93348
 
 # Verifica se existe o botão de continuar
 if continue_btn:
+    # Caso exista o botão continuar
+    # Scrolla a tela até o botão continuar e clica no botão
     browser.execute_script("arguments[0].scrollIntoView({block: 'center'})", continue_btn)
     wait = WebDriverWait(browser, 10)
     wait.until(EC.element_to_be_clickable(continue_btn))
